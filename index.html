@@ -518,67 +518,6 @@
       <p class="h2 mb-2">
         “Siempre llega una nueva herramienta. La tecnología es neutral, depende de cómo se use”   
       </p>
-      <p class="h4"><a href="#">Rick Smolan</a></p>
-      <div class="container">
-        <div style="text-align: justify;">
-        <pre>
-          <code>
-        <p class="h2">
-          <h2><img src="docker-logo.png" style="width: 25%;"></h2>
-          <br>
-          - first, make sure docker is running
-          (.... this build will generates an id for this image )
-          <span style="color:darkcyan">docker build -t edictuscli</span>
-          <br>
-          - to check my images
-          <span style="color:darkcyan">docker images</span>
-          <br>
-          - to run as an image of docker (container) as interactive mode
-          ( -p to run in port 4000 otherwise so will use 3000)
-          <span style="color:darkcyan">docker run -it -p 4000:3000 edictuscli</span>
-          <br>
-          - to run as a process
-          <span style="color:darkcyan">docker run -d -p 4000:3000 edictuscli</span>
-          <br>
-          - to view running docker process
-          <span style="color:darkcyan">docker ps</span>
-          <br>
-          - to stop the process
-          ( ... this command requires the process id, you can use the first three characters of the process to stop it)
-          (process name sample 123jfkdjfkldjfk)
-          <span style="color:darkcyan">docker stop 123</span>
-          <br>
-          ... this will stop the process with the name 123jfkdjfkldjfk
-        </code>
-      </pre>
-        </p>
-        <pre>
-          <code>
-        <p class="h2">
-          <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="kubernetes-logo.png" style="width: 15%;"></h2>
-          <br>
-          So to start the application run the following command
-
-          <span style="color:darkcyan">kubectl apply -f edictusdemo.yaml</span>
-          (that's assuming you're located in the same foldr the yaml file is)
-          
-          This is the output you should get:
-          <span style="color:darkcyan">
-          > deployment.extensions "edictusdemo" created  
-          > service "edictusdemo-service" created</span>
-          Now we need to check what port was assigned to our application by Kubernetes. In order to do that we'll to get info about the created service.
-          
-          <span style="color:darkcyan">kubectl get service edictusdemo-service</span>
-          This is the output I got, so in my case, the assigned port is 30361, it'll most certainly be different in your case.
-          <span style="color:darkcyan">
-          NAME                  TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
-          edictusdemo-service   NodePort   10.107.133.248   <none>        80:30361/TCP   2m
-          </span>  
-        </p>
-        </code>
-      </pre>
-      </div>
-      </div>
     </section>
 
 
